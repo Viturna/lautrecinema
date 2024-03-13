@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="./src/css/style.css" rel="stylesheet">
-    <link href="./src/css/videos.css" rel="stylesheet">
 </head>
 <body>
     <?php 
@@ -15,7 +14,8 @@
     // Exécuter une requête SELECT
     $recents = mysqli_query($connexion, "SELECT * FROM video ORDER BY dateAjoutVid LIMIT 1");
     ?>
-
+    <main class="grid-2">
+    <section class="new">
     <h2>Nouveauté</h2>
     <?php
     foreach ($recents as $recent){
@@ -37,7 +37,9 @@
     <?php
     } 
     ?>
-
+    </section>
+  
+    <section class="episode">
     <h2>Nos épisodes</h2>
 
     <?php
@@ -62,6 +64,8 @@
     <?php
     }
     ?>
-
+    </section>
+   
+    </main>
 </body>
 </html>
