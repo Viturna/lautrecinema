@@ -18,7 +18,7 @@
       <div class="our-goal">
         <h2>Notre but</h2>
         <p>Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
-Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
+          Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
         <a href="#" class="button">Découvrir les épisodes</a>
       </div>
     </div>
@@ -67,8 +67,8 @@ Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero e
         </div>
       </div>
     </div>
-
   </main>
+  <?php require_once 'footer.php' ?>
 </body>
 
 </html>

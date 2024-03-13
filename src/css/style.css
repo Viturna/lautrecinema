@@ -1,69 +1,96 @@
 header {
+  height: 150px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
+
 header ul {
   list-style: none;
   display: flex;
   gap: 3vw;
 }
-header ul li{
+
+header ul li {
   color: #2D2D2D;
 }
-header ul li .active{
+
+header ul li .active {
   color: #FF3737;
 }
-header ul li:hover{
+
+header ul li:hover {
   color: #ae1b1b;
 }
-.grid{
+
+/* Footer */
+footer {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #2D2D2D;
+  align-items: center;
+  height: 125px;
+}
+footer p {
+  color: #FFF;
+}
+
+.grid {
   padding: 0 10vw;
 }
-body{
+
+body {
   background-color: #FCF4F0;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
 }
 
-.red{
+.red {
   color: #FF3737;
 }
-.snell{
+
+.snell {
   font-family: "Snell Roundhand";
   letter-spacing: 13px;
 }
-h1{
+
+h1 {
   text-transform: uppercase;
   color: #2D2D2D;
   font-size: 4rem;
   font-weight: 700;
 }
-h2{
+
+h2 {
   color: #2D2D2D;
   font-weight: 700;
   margin-bottom: 16px;
   font-size: 1.5rem;
 }
-p{
+
+p {
   color: #8F8F8F;
   line-height: 125%;
   font-size: 1rem;
 }
-.top-a-propos{
+
+.top-a-propos {
   margin-top: 94px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.top-a-propos p{
+
+.top-a-propos p {
   margin-bottom: 48px;
 }
-.our-goal{
+
+.our-goal {
   width: 40vw;
 }
 
-.button{
+.button {
   font-size: 1rem;
   font-weight: 700;
   color: #FFF;
@@ -71,36 +98,42 @@ p{
   padding: 25px 45px;
   text-decoration: none;
 }
-.button:hover{
+
+.button:hover {
   background-color: #ae1b1b;
 }
 
 
-.our-team{
+.our-team {
   margin-top: 128px;
 }
-.our-team h2{
+
+.our-team h2 {
   text-align: center;
 }
-.box-profil{
+
+.box-profil {
   margin-top: 64px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.profil{
+
+.profil {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 15vw;
 }
-.profil-img{
+
+.profil-img {
   width: 110px;
   height: 110px;
   border-radius: 100%;
 }
-.profil .name{
+
+.profil .name {
   margin-top: 16px;
   margin-bottom: 32px;
   color: #2D2D2D;
