@@ -1,4 +1,4 @@
-<header>
+<header class="grid">
   <img src="./src/image/logo-red.svg" alt="">
   <nav>
     <ul>
