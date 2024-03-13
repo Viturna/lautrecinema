@@ -1,22 +1,15 @@
 <?php
-//define ROOT_PATH
-define('ROOT', $_SERVER['DOCUMENT_ROOT']);
-define('ROOT_URL', 'http://localhost/lautrecinema');
+$serveur = "localhost"; // ou l'adresse IP si différente
+$utilisateur = "root";
+$motDePasse = "";
+$baseDeDonnees = "lautrecinema";
 
-//Load env
-require_once ROOT . '/includes/libs/DotEnv.php';
-(new DotEnv(ROOT.'/.env'))->load();
+// Connexion à la base de données
+$connexion = mysqli_connect($serveur, $utilisateur, $motDePasse, $baseDeDonnees);
 
-//defines
-require_once ROOT . '/config/defines.php';
-
-//debug
-if (getenv('APP_DEBUG') == 'true') {
-    require_once ROOT . '/config/debug.php';
+// Vérifier la connexion
+if (!$connexion) {
+    die("Échec de la connexion à la base de données : " . mysqli_connect_error());
 }
 
-//load functions
-require_once ROOT . '/functions/global.inc.php';
-
-//load security
-require_once ROOT . '/config/security.php';
+?>
