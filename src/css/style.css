@@ -1,3 +1,109 @@
 header {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 3vw;
+}
+header ul li{
+  color: #2D2D2D;
+}
+header ul li .active{
+  color: #FF3737;
+}
+header ul li:hover{
+  color: #ae1b1b;
+}
+.grid{
+  padding: 0 10vw;
+}
+body{
+  background-color: #FCF4F0;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.red{
+  color: #FF3737;
+}
+.snell{
+  font-family: "Snell Roundhand";
+  letter-spacing: 13px;
+}
+h1{
+  text-transform: uppercase;
+  color: #2D2D2D;
+  font-size: 4rem;
+  font-weight: 700;
+}
+h2{
+  color: #2D2D2D;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+p{
+  color: #8F8F8F;
+  line-height: 125%;
+  font-size: 1rem;
+}
+.top-a-propos{
+  margin-top: 94px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-a-propos p{
+  margin-bottom: 48px;
+}
+.our-goal{
+  width: 40vw;
+}
+
+.button{
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFF;
+  background-color: #FF3737;
+  padding: 25px 45px;
+  text-decoration: none;
+}
+.button:hover{
+  background-color: #ae1b1b;
+}
+
+
+.our-team{
+  margin-top: 128px;
+}
+.our-team h2{
+  text-align: center;
+}
+.box-profil{
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.profil{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+}
+.profil-img{
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+}
+.profil .name{
+  margin-top: 16px;
+  margin-bottom: 32px;
+  color: #2D2D2D;
+  font-size: 1rem;
+  text-align: center;
 }
