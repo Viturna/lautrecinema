@@ -1,3 +1,4 @@
+a{text-decoration: none;}
 header {
   height: 150px;
   display: flex;
@@ -22,15 +23,15 @@ header ul {
   gap: 3vw;
 }
 
-.menu li {
+.menu li a{
   color: #2D2D2D;
 }
 
-.menu li.active {
+.menu li a .active {
   color: #FF3737;
 }
 
-.menu li:hover {
+.menu li a:hover {
   color: #ae1b1b;
 }
 /* Footer */
@@ -200,7 +201,7 @@ p {
   .menu{
     flex-direction: column;
   }
-.menu li{
+.menu li a{
   color: #FFF;
 }
 
@@ -287,6 +288,9 @@ p {
 .episode{
   margin-top: 64px;
 }
+.new{
+  margin-top: 64px;
+}
 .card{
   display: flex;
   flex-direction: row;
@@ -325,7 +329,20 @@ p {
 }
 
 .icon-play{
-  width: 50px;
+  width: 30px;
   height: auto;
   margin-right: 30px;
+  cursor: pointer;
+}
+.icon-play path{
+  fill: #FF3737;
+}
+.icon-play path:hover{
+  fill: #ae1b1b;
+}
+.play-one path{
+  fill: #FFF;
+}
+.play-one path:hover{
+  fill: #f3f3f3;
 }

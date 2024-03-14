@@ -19,50 +19,50 @@
         <h2>Notre but</h2>
         <p>Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
           Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
-        <a href="#" class="button">Découvrir les épisodes</a>
+        <a href="./videos.php" class="button">Découvrir les épisodes</a>
       </div>
     </div>
     <div class="our-team">
       <h2>Notre équipe</h2>
       <div class="box-profil">
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/riquier-thomas.jpg" alt="">
           <p class="name">Riquier <br> Thomas</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/cabaret-line.jpg" alt="">
           <p class="name">Cabaret <br> Line</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/garbuio--binaud-eva.jpg" alt="">
           <p class="name">Garbuïo--Binaud <br> Eva</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/juhel-alexis.jpg" alt="">
           <p class="name">Juhel <br> Alexis</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/quemere-edgar.jpg" alt="">
           <p class="name">Quéméré <br> Edgar</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/merlaud-thomas.jpg" alt="">
           <p class="name">Merlaud <br> Thomas</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/corberand-antoine.jpg" alt="">
           <p class="name">Corberand <br> Antoine</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/cellier-elyser.jpg" alt="">
           <p class="name">Cellier <br> Elyser</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/tighidet-billel.jpg" alt="">
           <p class="name">Tighidet <br> Billel</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/profil-img.jpg" alt="">
+          <img class="profil-img" src="./src/image/valton-gabriel.jpg" alt="">
           <p class="name">Valton <br> Gabriel</p>
         </div>
       </div>
