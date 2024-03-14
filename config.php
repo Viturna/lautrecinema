@@ -1,7 +1,7 @@
 <?php
 $serveur = "localhost"; // ou l'adresse IP si différente
 $utilisateur = "root";
-$motDePasse = "root";
+$motDePasse = "";
 $baseDeDonnees = "lautrecinema";
 
 // Connexion à la base de données
