@@ -3,3 +3,43 @@
     flex-direction: column;
     gap: 40px;
 }
+
+.video{
+    background-image: url("../image/img_pilote.png"); /* Remplacez 'chemin_vers_votre_image.jpg' par le chemin de votre image */
+    background-size: cover; /* Ajuste la taille de l'image pour remplir complètement la div */
+    background-position: center;
+    width: 100%;
+    height: 42vh;
+    border-radius: 10px;
+    position: relative;
+}
+
+.infos{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.074);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    position: absolute;
+    color: #FCF4F0;
+}
+
+.title-video{
+    bottom: 3vh;
+    left: -1vw;
+    padding: 2vh 2vw;
+}
+
+.duree-video{
+    top: 3vh;
+    right: 3vh;
+    padding: 1vh 1vw;
+}
+
+.duree-video p{
+    color: #FCF4F0;
+}
