@@ -23,9 +23,12 @@
             $img = $recent["imgVid"];
             $sources = $recent["sourcesVid"];
             $durée = $recent["timeVid"];
+            $url = $recent["urlVid"];
         ?>
             <div class="col-episode">
-                <img src="../src/image/img_vid2.png" alt="vignette de la vidéo">
+                <div>
+                    <iframe width="560" height="315" src="<?php echo $url ?>" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <h3>Description</h3>
                 <p><?php echo $description ?></p>
                 <h3>Sources</h3>
