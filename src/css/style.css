@@ -204,7 +204,6 @@ input[type="search"] {
   appearance: none;
   transition: all var(--dur) var(--bez);
   transition-property: width, border-radius;
-  z-index: 1;
   position: relative;
 }
 button {
@@ -308,6 +307,9 @@ h3{
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
+  header{
+    height: 100;
+  }
   .header-logo{
     width: 38px;
     height: 72px;
@@ -321,9 +323,11 @@ h3{
   }
 
   .menu-btn .bar {
+
     width: 30px;
     height: 4px;
     position: absolute;
+    z-index: 1;
     top: 50%;
     left: 50%;
     border-radius: 4px;
@@ -342,6 +346,7 @@ h3{
 
   .menu-btn .bar:nth-of-type(3) {
     top: calc(50% + 9px);
+
   }
 
   .menu-btn.active .bar:nth-of-type(1) {
@@ -377,6 +382,7 @@ h3{
     /* Ajoute une transition à la propriété transform */
   }
   .menu.active {
+    z-index: 1;
     transform: translateX(-100%);
     /* Faites glisser le menu dans la vue */
   }
