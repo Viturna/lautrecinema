@@ -1,9 +1,11 @@
 <header class="grid">
-  <img class="header-logo" src="./src/image/logo-red.svg" alt="">
+  <a href="/index.php">
+  <img class="header-logo" src="/src/image/logo-red.svg" alt="">
+  </a>
   <nav>
     <ul class="menu">
-      <li><a href="./index.php" class=" <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Accueil</a></li>
-      <li><a href="./videos.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'videos.php' ? 'active' : ''; ?>"> Nos épisodes</a></li>
+      <li><a href="/index.php" class=" <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Accueil</a></li>
+      <li><a href="/videos.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'videos.php' ? 'active' : ''; ?>"> Nos épisodes</a></li>
       <li><a href="#">Autre page</a></li>
     </ul>
     <div class="menu-btn">
