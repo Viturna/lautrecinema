@@ -7,7 +7,7 @@
     <ul class="menu">
       <li><a href="/index.php" class="menu-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Accueil</a></li>
       <li><a href="/videos.php" class="menu-link <?php echo basename($_SERVER['PHP_SELF']) == 'videos.php' ? 'active' : ''; ?>"> Nos épisodes</a></li>
-      <li><a href="#" class="menu-link">Showtime MMI Bordeaux</a></li>
+      <li><a href="/showtime.php" class="menu-link <?php echo basename($_SERVER['PHP_SELF']) == 'showtime.php' ? 'active' : ''; ?>">Showtime</a></li>
     </ul>
     <div class="menu-btn">
       <span class="bar"></span>

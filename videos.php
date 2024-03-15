@@ -59,7 +59,7 @@
       <h2>Nos épisodes</h2>
       <div id="searchResults"></div>
       <?php
-      $videos1 = mysqli_query($connexion, "SELECT * FROM video ORDER BY dateAjoutVid LIMIT 1, 2");
+      $videos1 = mysqli_query($connexion, "SELECT * FROM video ORDER BY dateAjoutVid LIMIT 2");
 
       foreach ($videos1 as $video1) {
         $id = $video1["idVid"];
@@ -117,6 +117,42 @@
 
   </main>
   <?php include_once './footer.php'; ?>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var searchInput = document.getElementById('search');
+    var titles = document.querySelectorAll('.card h3');
+    var searchResults = document.getElementById('searchResults');
+
+    // Fonction pour filtrer les titres
+    function filterTitles() {
+      var searchTerm = searchInput.value.trim().toLowerCase();
+
+      // Vérifier si le champ de recherche est vide
+      if (searchTerm === '') {
+        searchResults.innerHTML = ''; // Effacer les résultats si le champ est vide
+        return;
+      }
+
+      var filteredTitles = Array.from(titles).filter(function(title) {
+        return title.textContent.toLowerCase().includes(searchTerm);
+      });
+
+      // Construire le HTML des résultats de la recherche
+      var html = '';
+      filteredTitles.forEach(function(title) {
+        html += '<p>' + title.textContent + '</p>';
+      });
+
+      // Afficher les résultats dans la div searchResults
+      searchResults.innerHTML = html;
+    }
+
+    // Écouter les événements de saisie dans le champ de recherche
+    searchInput.addEventListener('input', filterTitles);
+  });
+</script>
+
+
 
 </body>
 
