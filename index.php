@@ -17,8 +17,7 @@
       <h1>L'au<span class="snell red">t</span>re <br><span class="snell red">c</span>inéma</h1>
       <div class="our-goal">
         <h2>Notre but</h2>
-        <p>Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis.
-          Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
+        <p>Bienvenue dans "L'Autre Cinéma" ! Plongez au cœur des coulisses de l'industrie cinématographique à travers une série qui met en lumière les héros méconnus de l'écran : les artisans du cinéma. <br> Chaque mois, un nouvel épisode mettra en lumière un métier différent. Rejoignez-nous pour une exploration captivante de l'art et de la technique qui se cachent derrière chaque chef-d'œuvre cinématographique.</p>
         <a href="./videos.php" class="button">Découvrir les épisodes</a>
       </div>
     </div>
