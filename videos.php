@@ -59,13 +59,13 @@
       <h2>Nos épisodes</h2>
       <div id="searchResults"></div>
       <?php
-      $videos = mysqli_query($connexion, "SELECT * FROM video ORDER BY dateAjoutVid LIMIT 1, 15");
+      $videos1 = mysqli_query($connexion, "SELECT * FROM video ORDER BY dateAjoutVid LIMIT 1, 2");
 
-      foreach ($videos as $video) {
-        $id = $video["idVid"];
-        $title = $video["titleVid"];
-        $img = $video["imgVid"];
-        $duree = $video["timeVid"];
+      foreach ($videos1 as $video1) {
+        $id = $video1["idVid"];
+        $title = $video1["titleVid"];
+        $img = $video1["imgVid"];
+        $duree = $video1["timeVid"];
         $duree_timestamp = strtotime($duree);
         $duree_datetime = new DateTime("@$duree_timestamp");
       ?>
@@ -83,6 +83,32 @@
             </div>
           </div>
         </a>
+
+      <?php
+      }
+
+      $videos = mysqli_query($connexion, "SELECT * FROM video ORDER BY dateAjoutVid LIMIT 2, 15");
+
+      foreach ($videos as $video) {
+        $id = $video["idVid"];
+        $title = $video["titleVid"];
+        $img = $video["imgVid"];
+        $duree = $video["timeVid"];
+        $duree_timestamp = strtotime($duree);
+        $duree_datetime = new DateTime("@$duree_timestamp");
+      ?>
+        <div class="card disabled">
+          <div class="card-content">
+            <div class="card-img"><img src="<?php echo './src/image/' . $img ?>" alt="vignette de l'épisode"></div>
+            <div class="col">
+              <h3><?php echo $title ?></h3>
+              <p class="duration"><?php echo $duree_datetime->format('i:s'); ?></p>
+            </div>
+            <svg class="icon-play" width="37" height="46" viewBox="0 0 37 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 3.72606V42.2739C0 45.2134 3.13079 46.9994 5.54187 45.3994L34.8346 26.1255C37.0657 24.6744 37.0657 21.3256 34.8346 19.8373L5.54187 0.60056C3.13079 -0.9994 0 0.786602 0 3.72606Z" fill="white" />
+            </svg>
+          </div>
+        </div>
 
       <?php
       }
