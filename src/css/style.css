@@ -30,15 +30,17 @@ header ul {
   gap: 3vw;
 }
 
-.menu li a {
+.menu li .menu-link {
   color: #2D2D2D;
+
 }
 
-.menu li a .active {
+.menu li .active {
   color: #FF3737;
+  font-weight: 700;
 }
 
-.menu li a:hover {
+.menu li .menu-link:hover {
   color: #ae1b1b;
 }
 

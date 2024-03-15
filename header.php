@@ -1,12 +1,13 @@
+
 <header class="grid">
   <a href="/index.php">
   <img class="header-logo" src="/src/image/logo-red.svg" alt="">
   </a>
   <nav>
     <ul class="menu">
-      <li><a href="/index.php" class=" <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Accueil</a></li>
-      <li><a href="/videos.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'videos.php' ? 'active' : ''; ?>"> Nos épisodes</a></li>
-      <li><a href="#">Showtime MMI Bordeaux</a></li>
+      <li><a href="/index.php" class="menu-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Accueil</a></li>
+      <li><a href="/videos.php" class="menu-link <?php echo basename($_SERVER['PHP_SELF']) == 'videos.php' ? 'active' : ''; ?>"> Nos épisodes</a></li>
+      <li><a href="#" class="menu-link">Showtime MMI Bordeaux</a></li>
     </ul>
     <div class="menu-btn">
       <span class="bar"></span>
