@@ -14,7 +14,8 @@ header ul {
   display: flex;
   gap: 3vw;
 }
-.header-logo{
+
+.header-logo {
   width: 45px;
   height: 86px;
 }
@@ -101,7 +102,7 @@ p {
 }
 
 .top-a-propos p {
-  margin-bottom: 84px;
+  margin-bottom: 34px;
 }
 
 .our-goal {
@@ -163,10 +164,6 @@ p {
   text-align: center;
 }
 
-
-
-/* Episode */
-
 /* ----------------------------------------- */
 /* -------------- PAGE VIDEO --------------- */
 /* ----------------------------------------- */
@@ -191,11 +188,14 @@ form {
   background: #FEF9F6;
   border-radius: 5px;
 }
-input, button {
+
+input,
+button {
   border: 0;
   color: #2D2D2D;
   font-size: 18px;
 }
+
 input[type="search"] {
   outline: 0;
   width: 100%;
@@ -206,6 +206,7 @@ input[type="search"] {
   transition-property: width, border-radius;
   position: relative;
 }
+
 button {
   display: none;
   position: absolute;
@@ -214,23 +215,26 @@ button {
   width: 40px;
   background: none;
 }
+
 input:not(:placeholder-shown) {
 
-  + button {
+  +button {
     display: block;
   }
 }
-.search-icon{
+
+.search-icon {
   fill: #FF3737;
   width: 30px;
   margin-left: 20px;
 }
 
-h3{
+h3 {
   font-size: 24px;
   font-weight: 700;
 }
-.duration{
+
+.duration {
   margin-top: 8px;
   font-size: 18px;
 }
@@ -242,7 +246,8 @@ h3{
   width: 100%;
   margin: 30px auto;
 }
-.card-content{
+
+.card-content {
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -253,6 +258,7 @@ h3{
   background-color: #FF3737;
   color: #FCF4F0;
 }
+
 .card-red .card-img {
   width: 140px;
   height: 140px;
@@ -303,17 +309,177 @@ h3{
 }
 
 @media (min-width: 0px) and (max-width: 319px) {
-
-}
-
-@media (min-width: 320px) and (max-width: 575px) {
-  header{
-    height: 100;
+  header {
+    height: 100px;
   }
-  .header-logo{
+
+  .header-logo {
     width: 38px;
     height: 72px;
   }
+
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .menu-btn .bar {
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    background-color: #2D2D2D;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-btn.active .bar {
+    background-color: white;
+  }
+
+  .menu-btn .bar:nth-of-type(2) {
+    top: calc(50% - 9px);
+  }
+
+  .menu-btn .bar:nth-of-type(3) {
+    top: calc(50% + 9px);
+
+  }
+
+  .menu-btn.active .bar:nth-of-type(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .menu-btn.active .bar:nth-of-type(2) {
+    display: none;
+  }
+
+  .menu-btn.active .bar:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vw;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FF3737;
+    transition: transform 0.4s ease;
+  }
+
+  .menu.active {
+    z-index: 1;
+    transform: translateX(-100%);
+    /* Faites glisser le menu dans la vue */
+  }
+
+  .menu li a {
+    font-size: 20px;
+    margin-bottom: 32px;
+    color: #FFF;
+  }
+
+
+  /* Episode */
+  .grid-2 {
+    padding: 0 5vw;
+  }
+
+  .episode {
+    margin-top: 32px;
+  }
+
+  .new {
+    margin-top: 32px;
+  }
+
+  form {
+    height: 60px;
+  }
+
+  input,
+  button {
+    font-size: 16px;
+  }
+
+  .search-icon {
+    width: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+    padding-right: 5px;
+  }
+
+  .duration {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .card {
+    margin: 20px auto;
+  }
+
+  .card-content {
+    padding: 10px;
+  }
+
+  .card-red .card-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+
+
+  .icon-play {
+    width: 20px;
+    margin-right: 20px;
+  }
+  /* Footer */
+  footer {
+    flex-direction: column;
+    height: 250px;
+  }
+  .footer-logo{
+    width: 45px;
+  }
+  footer p {
+    font-size: 16px;
+    padding: 0px 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+  header {
+    height: 100px;
+  }
+
+  .header-logo {
+    width: 38px;
+    height: 72px;
+  }
+
   .menu-btn {
     width: 30px;
     height: 30px;
@@ -362,6 +528,7 @@ h3{
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
   }
+
   .menu {
     list-style: none;
     display: flex;
@@ -381,6 +548,7 @@ h3{
     transition: transform 0.4s ease;
     /* Ajoute une transition à la propriété transform */
   }
+
   .menu.active {
     z-index: 1;
     transform: translateX(-100%);
@@ -468,19 +636,22 @@ h3{
   form {
     height: 60px;
   }
-  input, button {
+
+  input,
+  button {
     font-size: 16px;
   }
 
-  .search-icon{
+  .search-icon {
     width: 20px;
   }
 
-  h3{
+  h3 {
     font-size: 15px;
     padding-right: 5px;
   }
-  .duration{
+
+  .duration {
     margin-top: 4px;
     font-size: 12px;
   }
@@ -488,7 +659,8 @@ h3{
   .card {
     margin: 20px auto;
   }
-  .card-content{
+
+  .card-content {
     padding: 10px;
   }
 
@@ -508,19 +680,236 @@ h3{
     width: 20px;
     margin-right: 20px;
   }
+
+   /* Footer */
+   footer {
+    flex-direction: column;
+    height: 250px;
+  }
+  .footer-logo{
+    width: 45px;
+  }
+  footer p {
+    font-size: 16px;
+    padding: 0px 10px;
+    text-align: center;
+  }
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) and (max-width: 991px) {
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+  .snell {
+    letter-spacing: 13px;
+  }
 
-/* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+  h1 {
+    font-size: 62px;
+    margin-bottom: 70px;
+  }
 
-/* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {}
+  h2 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  .top-a-propos {
+    flex-direction: column;
+    margin-top: 34px;
+  }
+
+  .top-a-propos p {
+    margin-bottom: 54px;
+  }
+
+  .our-goal {
+    width: 80vw;
+  }
+
+  .button {
+    font-size: 17px;
+    padding: 25px 0px;
+    width: 80vw;
+  }
+
+  .our-team {
+    margin-top: 94px;
+  }
+
+  .box-profil {
+    margin-top: 64px;
+  }
+
+  .profil {
+    width: 22vw;
+    padding: 0 2vw;
+  }
+
+  .profil-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .profil .name {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+
+  /* ----------------------------------------- */
+  /* -------------- PAGE VIDEO --------------- */
+  /* ----------------------------------------- */
+  .grid-2 {
+    padding: 0 10vw;
+  }
+
+  .episode {
+    margin-top: 48px;
+  }
+
+  .new {
+    margin-top: 48px;
+  }
+
+  form {
+    height: 75px;
+  }
+
+  input,
+  button {
+    font-size: 18px;
+  }
+
+  button {
+    width: 40px;
+  }
+
+
+  .search-icon {
+    width: 25px;
+    margin-left: 20px;
+  }
+
+  h3 {
+    font-size: 20px;
+    padding-right: 10px;
+  }
+
+  .duration {
+    font-size: 16px;
+  }
+
+  .card {
+    margin: 20px auto;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-red .card-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .icon-play {
+    width: 25px;
+    margin-right: 20px;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    height: 280px;
+  }
+
+  footer p {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  /* ----------------------------------------- */
+  /* -------------- PAGE VIDEO --------------- */
+  /* ----------------------------------------- */
+  .grid-2 {
+    padding: 0 10vw;
+  }
+
+  .episode {
+    margin-top: 64px;
+  }
+
+  .new {
+    margin-top: 64px;
+  }
+
+  form {
+    height: 75px;
+  }
+
+  input,
+  button {
+    font-size: 18px;
+  }
+
+
+  button {
+    width: 40px;
+  }
+
+  .search-icon {
+    width: 30px;
+    margin-left: 20px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .duration {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .card {
+    border-radius: 8px;
+    margin: 30px auto;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-red .card-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  .icon-play {
+    width: 30px;
+    margin-right: 30px;
+  }
+
+}
