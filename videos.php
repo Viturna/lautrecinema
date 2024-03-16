@@ -18,18 +18,19 @@
   $recents = mysqli_query($connexion, "SELECT * FROM video ORDER BY dateAjoutVid LIMIT 1");
   ?>
   <main class="grid-2">
-    <form  id="searchForm" role="search">
+    <form id="searchForm" role="search">
       <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
         <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
       </svg>
-      <input id="search" type="search" placeholder="Rechercher une émission" autofocus required />
+      <input id="search" type="search" placeholder="Rechercher une émission" required autocomplete="off"/>
     </form>
     <div id="searchResults"></div>
     <section class="new">
       <h2>Nouveauté</h2>
       <?php
       foreach ($recents as $recent) {
+        $id = $recent["idVid"];
         $title = $recent["titleVid"];
         $img = $recent["imgVid"];
         $sources = $recent["sourcesVid"];
@@ -37,19 +38,20 @@
         $duree_timestamp = strtotime($duree);
         $duree_datetime = new DateTime("@$duree_timestamp");
       ?>
-
-        <div class="card card-red">
-          <div class="card-content">
-            <div class="card-img"><img src="<?php echo './src/image/' . $img ?>" alt="vignette de l'épisode"></div>
-            <div class="col">
-              <h3><?php echo $title ?></h3>
-              <p class="duration"><?php echo $duree_datetime->format('i:s'); ?></p>
+        <a class="link-card" href="<?php echo './episodes/episode' . $id . '.php'; ?>" data-link="<?php echo './episodes/episode' . $id . '.php'; ?>">
+          <div class="card card-red">
+            <div class="card-content">
+              <div class="card-img"><img src="<?php echo './src/image/' . $img ?>" alt="vignette de l'épisode"></div>
+              <div class="col">
+                <h3><?php echo $title ?></h3>
+                <p class="duration"><?php echo $duree_datetime->format('i:s'); ?></p>
+              </div>
+              <svg class="icon-play play-one" width="37" height="46" viewBox="0 0 37 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3.72606V42.2739C0 45.2134 3.13079 46.9994 5.54187 45.3994L34.8346 26.1255C37.0657 24.6744 37.0657 21.3256 34.8346 19.8373L5.54187 0.60056C3.13079 -0.9994 0 0.786602 0 3.72606Z" fill="white" />
+              </svg>
             </div>
-            <svg class="icon-play play-one" width="37" height="46" viewBox="0 0 37 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 3.72606V42.2739C0 45.2134 3.13079 46.9994 5.54187 45.3994L34.8346 26.1255C37.0657 24.6744 37.0657 21.3256 34.8346 19.8373L5.54187 0.60056C3.13079 -0.9994 0 0.786602 0 3.72606Z" fill="white" />
-            </svg>
           </div>
-        </div>
+        </a>
       <?php
       }
       ?>
@@ -69,7 +71,7 @@
         $duree_timestamp = strtotime($duree);
         $duree_datetime = new DateTime("@$duree_timestamp");
       ?>
-        <a href="<?php echo './episodes/episode' . $id . '.php'; ?>">
+        <a class="link-card" href="<?php echo './episodes/episode' . $id . '.php'; ?>" data-link="<?php echo './episodes/episode' . $id . '.php'; ?>">
           <div class="card">
             <div class="card-content">
               <div class="card-img"><img src="<?php echo './src/image/' . $img ?>" alt="vignette de l'épisode"></div>
@@ -118,39 +120,44 @@
   </main>
   <?php include_once './footer.php'; ?>
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var searchInput = document.getElementById('search');
-    var titles = document.querySelectorAll('.card h3');
-    var searchResults = document.getElementById('searchResults');
+    document.addEventListener("DOMContentLoaded", function() {
+      var searchInput = document.getElementById('search');
+      var titles = document.querySelectorAll('.episode .card h3');
+      var links = document.querySelectorAll('.episode .link-card');
+      var searchResults = document.getElementById('searchResults');
 
-    // Fonction pour filtrer les titres
-    function filterTitles() {
-      var searchTerm = searchInput.value.trim().toLowerCase();
+      // Fonction pour filtrer les titres
+      function filterTitles() {
+        var searchTerm = searchInput.value.trim().toLowerCase();
 
-      // Vérifier si le champ de recherche est vide
-      if (searchTerm === '') {
-        searchResults.innerHTML = ''; // Effacer les résultats si le champ est vide
-        return;
+        // Vérifier si le champ de recherche est vide
+        if (searchTerm === '') {
+          searchResults.innerHTML = ''; // Effacer les résultats si le champ est vide
+          return;
+        }
+
+        var filteredTitles = Array.from(titles).filter(function(title) {
+          return title.textContent.toLowerCase().includes(searchTerm);
+        });
+
+        // Construire le HTML des résultats de la recherche avec des liens
+        var html = '';
+        filteredTitles.forEach(function(title) {
+          // Récupérer le lien de la carte parente de titre
+          var link = title.closest('.link-card').getAttribute('data-link');
+          html += '<a href="' + link + '"><p class="search-result">' + title.textContent + '</p></a>';
+        });
+
+        // Afficher les résultats dans la div searchResults
+        searchResults.innerHTML = html;
       }
 
-      var filteredTitles = Array.from(titles).filter(function(title) {
-        return title.textContent.toLowerCase().includes(searchTerm);
-      });
+      // Écouter les événements de saisie dans le champ de recherche
+      searchInput.addEventListener('input', filterTitles);
+    });
+  </script>
 
-      // Construire le HTML des résultats de la recherche
-      var html = '';
-      filteredTitles.forEach(function(title) {
-        html += '<p>' + title.textContent + '</p>';
-      });
 
-      // Afficher les résultats dans la div searchResults
-      searchResults.innerHTML = html;
-    }
-
-    // Écouter les événements de saisie dans le champ de recherche
-    searchInput.addEventListener('input', filterTitles);
-  });
-</script>
 
 
 

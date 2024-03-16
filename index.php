@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+
   <?php include_once './header.php'; ?>
   <main class="grid">
     <div class="top-a-propos">
@@ -25,43 +27,43 @@
       <h2>Notre équipe</h2>
       <div class="box-profil">
         <div class="profil">
-          <img class="profil-img" src="./src/image/riquier-thomas.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/riquier-thomas.jpg" alt="">
           <p class="name">Riquier <br> Thomas</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/cabaret-line.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/cabaret-line.jpg" alt="">
           <p class="name">Cabaret <br> Line</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/garbuio--binaud-eva.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/garbuio--binaud-eva.jpg" alt="">
           <p class="name">Garbuïo--Binaud <br> Eva</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/juhel-alexis.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/juhel-alexis.jpg" alt="">
           <p class="name">Juhel <br> Alexis</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/quemere-edgar.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/quemere-edgar.jpg" alt="">
           <p class="name">Quéméré <br> Edgar</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/merlaud-thomas.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/merlaud-thomas.jpg" alt="">
           <p class="name">Merlaud <br> Thomas</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/corberand-antoine.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/corberand-antoine.jpg" alt="">
           <p class="name">Corberand <br> Antoine</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/cellier-elyser.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/cellier-elyser.jpg" alt="">
           <p class="name">Cellier <br> Elyser</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/tighidet-billel.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/tighidet-billel.jpg" alt="">
           <p class="name">Tighidet <br> Billel</p>
         </div>
         <div class="profil">
-          <img class="profil-img" src="./src/image/valton-gabriel.jpg" alt="">
+          <img class="profil-img" src="./src/image/profil/valton-gabriel.jpg" alt="">
           <p class="name">Valton <br> Gabriel</p>
         </div>
       </div>
