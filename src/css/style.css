@@ -344,6 +344,15 @@ h3 {
 .play-one path:hover {
   fill: #f3f3f3;
 }
+.flex-icon-top svg{
+  cursor: pointer;
+}
+#arrowDown path:hover{
+  stroke: #ae1b1b;
+}
+#shareIcon path:hover{
+  fill: #ae1b1b;
+}
 
 
 /* Styles pour l'arrière-plan semi-transparent */
