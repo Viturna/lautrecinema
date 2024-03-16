@@ -26,46 +26,46 @@
     <div class="our-team">
       <h2>Notre équipe</h2>
       <div class="box-profil">
-        <div class="profil">
+        <a href="https://viturna.fr" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/riquier-thomas.jpg" alt="">
           <p class="name">Riquier <br> Thomas</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://www.linkedin.com/in/line-cabaret/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/cabaret-line.jpg" alt="">
           <p class="name">Cabaret <br> Line</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://www.linkedin.com/in/eva-garbuio-binaud-639bb4297/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/garbuio--binaud-eva.jpg" alt="">
           <p class="name">Garbuïo--Binaud <br> Eva</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://www.linkedin.com/in/alexis-juhel16/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/juhel-alexis.jpg" alt="">
           <p class="name">Juhel <br> Alexis</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://edgar-quemere.fr/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/quemere-edgar.jpg" alt="">
           <p class="name">Quéméré <br> Edgar</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://www.linkedin.com/in/thomas-merlaud-857331232/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/merlaud-thomas.jpg" alt="">
           <p class="name">Merlaud <br> Thomas</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://www.linkedin.com/in/antoine-corberand-49898b294/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/corberand-antoine.jpg" alt="">
           <p class="name">Corberand <br> Antoine</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://www.linkedin.com/in/elyser-cellier-74b7b722a/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/cellier-elyser.jpg" alt="">
           <p class="name">Cellier <br> Elyser</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://billeltighidet.com/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/tighidet-billel.jpg" alt="">
           <p class="name">Tighidet <br> Billel</p>
-        </div>
-        <div class="profil">
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-valton-b2800b294/" target="_blank" class="profil">
           <img class="profil-img" src="./src/image/profil/valton-gabriel.jpg" alt="">
           <p class="name">Valton <br> Gabriel</p>
-        </div>
+        </a>
       </div>
     </div>
   </main>
