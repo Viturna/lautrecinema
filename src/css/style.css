@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Snell';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/SnellBT-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
 a {
   text-decoration: none;
 }
@@ -78,12 +86,12 @@ body {
 }
 
 .snell:nth-child(1) {
-  letter-spacing: 30px;
+  letter-spacing: 10px;
 }
 
 .snell {
-  font-family: "Snell Roundhand";
-  letter-spacing: 13px;
+  font-family: "Snell";
+  letter-spacing: -5px;
 }
 
 h1 {
