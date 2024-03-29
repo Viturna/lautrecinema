@@ -521,6 +521,19 @@ h3 {
   fill: #ae1b1b;
 }
 
+.controller-disabled{
+  fill: #8F8F8F;
+}
+
+.message {
+  position: absolute;
+  display: none;
+  background-color: #dbcfc9;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 9999;
+}
+
 .circle {
   width: 80px;
   height: 80px;
